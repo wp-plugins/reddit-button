@@ -23,4 +23,6 @@ And if, for some reason, you are not happy with the plugin's decision to show or
 
 You can customize the plugin's behaviour using the 'Reddit Button' tab in your blog's option page.
 
+== Screenshots ==
 
+1. Advanced Reddit Button Post Control Rock'n'Roll
