@@ -3,7 +3,7 @@
 Plugin Name: RedditButton
 Plugin URI: http://bringsfear.net/redditbutton/
 Description: Displays the <a href="http://reddit.com/buttons">reddit buttons</a> in your posts and can be configured to suit your liking.
-Version: 1 E.T.
+Version: 1 A.L.F.
 Author: Christian Inzinger
 Author URI: http://bringsfear.net/
 License: GPLv2
@@ -265,7 +265,7 @@ function reddit_post_controls() {
 	$ret .= ".rb_control img { border: 0 !important; margin: 0 !important; padding: 0 !important; }\n";
 	$ret .= "-->\n</style>\n";
 	$ret .= '<table class="rb_control" border="0" ><tr>';
-	$ret .= '<td><b><a href="'.get_bloginfo('url').'/wp-admin/options-general.php?page=reddit-button.php" title="Edit reddit button options"><img src="'.get_bloginfo('url').'/wp-admin/options-general.php?_rb_img=icon:alien" width="18px" height="18px" alt="reddit" title="Edit reddit button options" /></a></td>';
+	$ret .= '<td><b><a href="'.get_bloginfo('url').'/wp-admin/options-general.php?page=reddit-button.php" title="Edit reddit button options"><img src="'.get_bloginfo('url').'/wp-admin/options-general.php?_rb_img=icon:alien" width="18px" height="18px" alt="reddit" title="Edit reddit button options" /></a></b></td>';
 	$ret .= '<th valign="center"><b><a href="'.get_bloginfo('url').'/wp-admin/options-general.php?page=reddit-button.php" title="Edit reddit button options">:</a> </b></td>';
 	$ret .= '<td><img " ';
 	$ret .= 'src="'.get_bloginfo('url')."/wp-admin/options-general.php?_rb_img=";
