@@ -3,7 +3,7 @@ Contributors: inz
 Donate link: http://bringsfear.net/redditbutton/
 Tags: reddit, social bookmarking
 Requires at least: 1.5
-Tested up to: 2.3
+Tested up to: 2.3.1
 Stable tag: trunk
 
 Displays a reddit button in your posts. 
