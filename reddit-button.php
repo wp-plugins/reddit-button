@@ -3,9 +3,9 @@
 Plugin Name: RedditButton
 Plugin URI: http://bringsfear.net/redditbutton/
 Description: Displays the <a href="http://reddit.com/buttons">reddit buttons</a> in your posts and can be configured to suit your liking.
-Version: 1 A.L.F.
+Version: 1 Sigourney
 Author: Christian Inzinger
-Author URI: http://bringsfear.net/
+Author URI: http://github.com/inz
 License: GPLv2
 */
 /*
