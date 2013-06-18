@@ -260,9 +260,9 @@ function reddit_post_controls() {
 	$_poststate = get_post_meta($post->ID, '_rb_reddit', true);
 
 	$ret = "\n<style type=\"text/css\">\n<!--\n";
-	$ret .= ".rb_control { border: 1px solid #ccc }\n";
+	$ret .= ".rb_control { border: 1px solid #ccc; width: auto; }\n";
 	$ret .= ".rb_control td { width: 16px; }\n";
-	$ret .= ".rb_control img { border: 0 !important; margin: 0 !important; padding: 0 !important; }\n";
+	$ret .= ".rb_control img { border: 0 !important; margin: 0 !important; padding: 0 !important; box-shadow: none; }\n";
 	$ret .= "-->\n</style>\n";
 	$ret .= '<table class="rb_control" border="0" ><tr>';
 	$ret .= '<td><b><a href="'.get_bloginfo('url').'/wp-admin/options-general.php?page=reddit-button.php" title="Edit reddit button options"><img src="'.get_bloginfo('url').'/wp-admin/options-general.php?_rb_img=icon:alien" width="18px" height="18px" alt="reddit" title="Edit reddit button options" /></a></b></td>';
