@@ -246,7 +246,7 @@ function reddit_button_code() {
 		} else if($rb_config['rb_buttonstyle'] == '3') {
 			$_style .= "width: 66px; height: 66px;";
 		}
-		$_style .= " overflow: hidden; position: relative; left: 8px;";
+		$_style .= " overflow: hidden; position: relative; margin-right: 8px;";
 		$ret .= "<div style=\"".$_style."\">";
 		$ret .= "<script>//<![CDATA[\nreddit_url=\"".get_permalink($post->ID)."\";\n//]]>\n</script>";
 		$ret .= '<script language="javascript" src="http://reddit.com/button.js?t='.$rb_config[rb_buttonstyle].'"></script>';
