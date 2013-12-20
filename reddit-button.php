@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: RedditButton
-Plugin URI: http://bringsfear.net/redditbutton/
+Plugin URI: http://wordpress.org/plugins/reddit-button/
 Description: Displays the <a href="http://reddit.com/buttons">reddit buttons</a> in your posts and can be configured to suit your liking.
-Version: 1 Sigourney
+Version: 1.3
 Author: Christian Inzinger
 Author URI: http://github.com/inz
 License: GPLv2
@@ -103,10 +103,10 @@ function rb_options_page() {
 		} else {
 			echo '<div id="message" class="error fade"><p><strong>The requested post either does not exist or you do not have the necessary permissions to perform the requested action!</strong></p></div>';
 		}
-	} 
+	}
 
 	?>
-	
+
 	<div class="wrap">
 		<h2>Reddit Button Options</h2>
 		<form method="post" action="">
@@ -222,7 +222,7 @@ function reddit_button_code() {
 		$ret .= "<!-- rb_post-meta: ".$_poststate." -->";
 		$ret .= "<!-- rb_behaviour:   ".$rb_config['rb_behaviour']." -->";
 	}
-	
+
 	if((is_page() || is_single()) && empty($_poststate) && $rb_config['rb_behaviour'] == "auto") {
 		$referer = strtolower($_SERVER['HTTP_REFERER']);
 		$redditreferer = "http://reddit.com/";
@@ -305,7 +305,7 @@ function _rb_update_post_meta($postID, $value) {
 
 if(!empty($_GET['_rb_img'])) {
 	$_img = $_GET['_rb_img'];
-	
+
 	if($_img == 'icon:alien') {
 		header("Content-Type: image/gif");
 		echo base64_decode("R0lGODlhEgASAOZxAMrKyujo6IKCgoqKin19fXR0dHZ2doODg6WlpaSkpFhYWIeHh66urm9vb6ampsfHx8nJyaurq4aGhvf395CQkO3t7YuLi3x8fJSUlMzMzH9/f1dXV4WFhYiIiFZWVv+JXZ+fn//OveDg4LOzs/8hAKCgoP/m3f+CWXNzc09PT5ubm/7+/kBAQLy8vJ6env+JZJmZmZycnP+CU//6+VNTU5aWljMzM1tbW9LS0ufn56qqqpGRkXh4eJeXl5iYmHd3d//+/tvb3GZmZm1tbf/l3Gpqav++p46OjpOTk4SEhHt7e3BwcC8vL/+piGFhYZqamsPDwzg4OP/RwMbGxl1dXX5+fqGhoXl5eTc3N1paWunp6Wlpaf/SwcjIyEdHR/39/XV1ddzc3Kenp//Uw/9nL9bW1mJiYv8dAMDAwF9fX2RkZP+NZO7u7lRUVP+/p/+JYv///zP/MwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAHEALAAAAAASABIAAAfYgHGCg4QcDoIbSoSLggM8KgZRFQQMjIQNgwY1aQ+WgwWEVgCeSAdUKRxPllUNF0MGETgBARAuKEsHRTtxSTEFWUFwwsPCaCw6HQkXAgUrcG5vRMJjJ1xwAWYCGHFMInAzZCRNwjJnH8IJWIJqwkBGaybCUi8hwgAWgj8ZxPzDPSCDFLCBM8FHFy05RiAQVkbBog1T4ADQcAXMgTBwxNCwJOQGAggZADyA4YWAJydtSnQYsICCAxsDLCXwgIHfFwJbWjASgIACvwkSIuBbJIHBEX4VNEBZMCgQADs=");
@@ -313,7 +313,7 @@ if(!empty($_GET['_rb_img'])) {
 	}
 
 	header("Content-Type: image/png");
-	
+
 	if($_img == 'state:redd') {
 		echo base64_decode("iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKfSURBVDjLpZPrS1NhHMf9O3bOdmwDCWREIYKEUHsVJBI7mg3FvCxL09290jZj2EyLMnJexkgpLbPUanNOberU5taUMnHZUULMvelCtWF0sW/n7MVMEiN64AsPD8/n83uucQDi/id/DBT4Dolypw/qsz0pTMbj/WHpiDgsdSUyUmeiPt2+V7SrIM+bSss8ySGdR4abQQv6lrui6VxsRonrGCS9VEjSQ9E7CtiqdOZ4UuTqnBHO1X7YXl6Daa4yGq7vWO1D40wVDtj4kWQbn94myPGkCDPdSesczE2sCZShwl8CzcwZ6NiUs6n2nYX99T1cnKqA2EKui6+TwphA5k4yqMayopU5mANV3lNQTBdCMVUA9VQh3GuDMHiVcLCS3J4jSLhCGmKCjBEx0xlshjXYhApfMZRP5CyYD+UkG08+xt+4wLVQZA1tzxthm2tEfD3JxARH7QkbD1ZuozaggdZbxK5kAIsf5qGaKMTY2lAU/rH5HW3PLsEwUYy+YCcERmIjJpDcpzb6l7th9KtQ69fi09ePUej9l7cx2DJbD7UrG3r3afQHOyCo+V3QQzE35pvQvnAZukk5zL5qRL59jsKbPzdheXoBZc4saFhBS6AO7V4zqCpiawuptwQG+UAa7Ct3UT0hh9p9EnXT5Vh6t4C22QaUDh6HwnECOmcO7K+6kW49DKqS2DrEZCtfuI+9GrNHg4fMHVSO5kE7nAPVkAxKBxcOzsajpS4Yh4ohUPPWKTUh3PaQEptIOr6BiJjcZXCwktaAGfrRIpwblqOV3YKdhfXOIvBLeREWpnd8ynsaSJoyESFphwTtfjN6X1jRO2+FxWtCWksqBApeiFIR9K6fiTpPiigDoadqCEag5YUFKl6Yrciw0VOlhOivv/Ff8wtn0KzlebrUYwAAAABJRU5ErkJggg==");
 	} else if($_img == 'state:auto') {
@@ -325,7 +325,7 @@ if(!empty($_GET['_rb_img'])) {
 	} else if($_img == 'action:auto') {
 		echo base64_decode("iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADpSURBVCjPY/jPgB8y0EmBHXdWaeu7ef9rHuaY50jU3J33v/VdVqkdN1SBEZtP18T/L/7f/X/wf+O96kM3f9z9f+T/xP8+XUZsYAWGfsUfrr6L2Ob9J/X/pP+V/1P/e/+J2LbiYfEHQz+ICV1N3yen+3PZf977/9z/Q//X/rf/7M81Ob3pu1EXWIFuZvr7aSVBOx1/uf0PBEK3/46/gnZOK0l/r5sJVqCp6Xu99/2qt+v+T/9f+L8CSK77v+pt73vf65qaYAVqzPYGXvdTvmR/z/4ZHhfunP0p+3vKF6/79gZqzPQLSYoUAABKPQ+kpVV/igAAAABJRU5ErkJggg==");
 	}
-	
+
 	exit;
 }
 
