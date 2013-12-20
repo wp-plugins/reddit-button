@@ -25,3 +25,8 @@ You can customize the plugin's behavior using the 'Reddit Button' tab in your bl
 == Screenshots ==
 
 1. Reddit Button Post Control
+
+== Changelog ==
+
+= 1.3 =
+* Minor fixes.
