@@ -1,6 +1,5 @@
 === Reddit Button ===
 Contributors: inz 
-Donate link: http://bringsfear.net/redditbutton/
 Tags: reddit, social bookmarking
 Requires at least: 1.5
 Tested up to: 3.8
