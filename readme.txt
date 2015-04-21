@@ -2,7 +2,7 @@
 Contributors: inz 
 Tags: reddit, social bookmarking
 Requires at least: 1.5
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: trunk
 
 Displays a reddit button in your posts. 
