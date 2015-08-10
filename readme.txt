@@ -2,14 +2,14 @@
 Contributors: inz 
 Tags: reddit, social bookmarking
 Requires at least: 1.5
-Tested up to: 4.2
+Tested up to: 4.3
 Stable tag: trunk
 
-Displays a reddit button in your posts. 
+Add a reddit button to your posts. 
 
 == Description ==
 
-reddit Button is a Wordpress plugin that shows - you may not believe it - a reddit button in your posts.
+reddit Button is a Wordpress plugin that adds a reddit button to your posts.
 
 The plugin lets you choose from all the reddit buttons and it is customizable as to where the button will show up in a post and on which posts it should be displayed. The plugin can also detect if a post is being referred to by reddit and have the button automagically show up on said post.
 
